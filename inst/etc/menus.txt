@@ -1,0 +1,23 @@
+# RcmdrPlugin seeg Menu Definitions
+# Miguel F Acevedo
+
+ item    graphsMenu      command        "Empirical cumulative plot..."        ecdfPlot          "numericP()" "packageAvailable('stats')"
+ item    graphsMenu      command        "Time series plot..."        	      tsPlot            "numericP()" "packageAvailable('stats')"
+ item    graphsMenu      command        "Autocorrelation function plot..."    acfPlot           "numericP()" "packageAvailable('stats')"
+ item    graphsMenu      command        "Exploratory Analysis EDA plots..."   edaPlot           "numericP()" "packageAvailable('seeg')"
+
+ menu    spatialMenu     topMenu         ""                                   ""                          "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Read geoEAS ppp ..."                scangeoEASppp               "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Convert to ppp ... "                convertToppp                "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Quad ChiSq ... "                    quadChisqppp                "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Quad Poisson ..."                   quadPoisppp                 "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Nearest Neighbor"                   nnGKppp                     "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Monte Carlo NN ..."                 nnGKenvppp                  "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Variogram Calc ..."                 varCal                      "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Model Semi-Var & Cov ..."           SemiVarCov                  "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Make Model Semi-Var & Cov ..."      MakeSemiVarCov              "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Ordinary Kriging ..."               OKrigingCmd                 "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Plot Kriged ..."                    PlotKriged                  "" "packageAvailable('seeg')"
+ item    spatialMenu     command         "Read and plot geoEAS raster ..."    scangeoEASras               "" "packageAvailable('seeg')"
+ item    topMenu         cascade         "Spatial"                            spatialMenu                 "" "packageAvailable('seeg')"
+
